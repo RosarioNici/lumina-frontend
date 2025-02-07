@@ -1,0 +1,276 @@
+/* Layout generale */
+.unified-feed {
+    display: flex;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+  }
+
+  /* Sidebar (a destra) */
+  .side-nav {
+    width: 220px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+
+  .profile-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    flex-grow: 1;
+  }
+
+  .nav-links li {
+    margin-bottom: 10px;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    color: #ff6f61;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  .nav-links li a:hover {
+    background-color: #ffe8e8;
+  }
+
+  .side-nav-bottom {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .settings-btn,
+  .logout-btn {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+  }
+
+  .settings-btn i {
+    margin-right: 5px;
+  }
+
+  .settings-btn:hover,
+  .logout-btn:hover {
+    background-color: #e85c50;
+  }
+
+  /* Main Feed */
+  .feed-main {
+    flex: 1;
+    margin-right: 220px;
+    padding: 20px;
+  }
+
+  .feed-header {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .feed-header input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+
+  .feed-header button {
+    padding: 10px 20px;
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .feed-header button:hover {
+    background-color: #145dbf;
+  }
+
+  /* Search Dropdown */
+  .search-dropdown {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    z-index: 10;
+    padding: 10px;
+  }
+
+  .search-suggestion {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .search-suggestion:hover {
+    background-color: #f0f0f0;
+  }
+
+  /* Post Cards */
+  .feed-posts {
+    margin-bottom: 20px;
+  }
+
+  .post-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+
+  .post-card:hover {
+    transform: translateY(-3px);
+  }
+
+  .post-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .post-card p {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  .post-card img,
+  .post-card video {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  /* Post Actions */
+  .post-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+  }
+
+  .action-btn {
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .action-btn:hover {
+    background-color: #145dbf;
+  }
+
+  /* Feed Suggestions (Creator cards) */
+  .feed-suggestions {
+    margin-bottom: 20px;
+    max-width: 800px;
+  }
+
+  .creator-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .creator-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+  }
+
+  .creator-card p {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  .creator-card button {
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+  }
+
+  .creator-card button:hover {
+    background-color: #145dbf;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .side-nav {
+      width: 100%;
+      height: auto;
+      position: relative;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 10px;
+    }
+    .feed-main {
+      margin-right: 0;
+      padding: 10px;
+    }
+    .navbar-btn {
+      padding: 6px 10px;
+      font-size: 0.9rem;
+    }
+  }

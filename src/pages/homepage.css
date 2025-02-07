@@ -1,0 +1,385 @@
+/* homepage.css */
+
+/* Generale */
+.homepage {
+    font-family: 'Lora', serif;
+    background-color: #f0f2f5;
+  }
+
+  /* Navbar dinamica */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px; /* Altezza fissa */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 0 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+    z-index: 100;
+  }
+
+  .navbar.hidden {
+    transform: translateY(-100%);
+  }
+
+  .navbar.visible {
+    transform: translateY(0);
+  }
+
+  /* Logo nella navbar */
+  .navbar-logo {
+    flex: 0 0 auto;
+  }
+
+  .navbar-logo img {
+    height: 100%;   /* L'immagine si adatta all'altezza della navbar */
+    max-height: 150px;
+    object-fit: contain;
+  }
+
+  /* Contenitore dei pulsanti sulla destra */
+  .navbar-links {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Stile per i bottoni */
+  .navbar-btn {
+    background-color: white;
+    color: #feabf8;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar-btn:hover {
+    background-color: #fccbf83d;
+  }
+
+  /* Popup */
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .popup-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .popup-content {
+    position: relative;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+  }
+
+  .popup-content h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #333;
+  }
+
+  .popup-content p {
+    font-size: 1rem;
+    color: #666;
+  }
+
+  .popup-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .popup-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+
+  .popup-btn.yes {
+    background-color: #28a745;
+    color: white;
+  }
+
+  .popup-btn.no {
+    background-color: #dc3545;
+    color: white;
+  }
+
+  .popup-btn:hover {
+    opacity: 0.9;
+  }
+
+  /* Animazione del Logo (schermata full screen) */
+  .logo-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  .animated-logo {
+    width: 300px;
+    animation: pulsate 1.5s infinite;
+  }
+
+  @keyframes pulsate {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+  }
+
+  /* Hero Section */
+  .hero {
+    margin-top: 120px; /* spazio per la navbar */
+    height: 90vh;
+    background: url('https://media.istockphoto.com/id/1352010441/it/foto/coppia-di-gattini-addormentati-innamorati-il-giorno-di-san-valentino-i-nasi-dei-gatti-si.jpg?s=612x612&w=0&k=20&c=bd60KCbS1ImSwQbdND-8c3uGUVGK9VLrDPMQ-ebAJ0Q=') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .hero-content {
+    text-align: center;
+    color: white;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+
+  .hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+
+  .hero-btn {
+    background-color: #ff6f61;
+    border: none;
+    padding: 15px 30px;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .hero-btn:hover {
+    background-color: #e85c50;
+  }
+
+  /* Features Section */
+  .features {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #ffffff;
+  }
+
+  .features h2 {
+    font-size: 2rem;
+    color: #ff6f61;
+    margin-bottom: 30px;
+  }
+
+  .features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .feature-item {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    text-align: center;
+  }
+
+  .feature-item img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+  }
+
+  .feature-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .feature-item p {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  /* Popular Creators Section */
+  .popular-creators {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+
+  .popular-creators h2 {
+    font-size: 2rem;
+    color: #ff6f61;
+    margin-bottom: 30px;
+  }
+
+  .creator-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .creator-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .creator-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #ff6f61;
+    margin-bottom: 10px;
+  }
+
+  .creator-card p {
+    font-size: 1rem;
+    color: #333;
+  }
+
+  /* Call to Action */
+  .call-to-action {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #ffffff;
+  }
+
+  .call-to-action h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff6f61;
+  }
+
+  .cta-btn {
+    background-color: #ff6f61;
+    border: none;
+    padding: 15px 30px;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .cta-btn:hover {
+    background-color: #e85c50;
+  }
+
+  /* Footer */
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+  }
+
+  .footer-links a {
+    color: #ff6f61;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+
+  /* Search Dropdown */
+  .search-dropdown {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    z-index: 10;
+    padding: 10px;
+  }
+
+  .search-suggestion {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .search-suggestion:hover {
+    background-color: #f0f0f0;
+  }
+
+  /* Responsività */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+
+    .features-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .creator-grid {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+  }

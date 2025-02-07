@@ -1,0 +1,42 @@
+/* src/pages/SearchResults.css */
+.search-results-page {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .search-results-header h1 {
+    font-size: 2rem;
+    color: #ff6f61;
+    margin-bottom: 20px;
+  }
+
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .result-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .result-card:hover {
+    background-color: #ffe8e8;
+  }
+
+  .hashtag {
+    font-weight: bold;
+    color: #ff6f61;
+  }
+
+  .creator-result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }

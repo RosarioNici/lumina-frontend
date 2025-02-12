@@ -11,6 +11,11 @@ import Feed from './pages/Feed';
 import Subscriptions from './pages/Subscriptions';
 import ContentManagement from './pages/ContentManagement';
 import SearchResults from './pages/SearchResults';
+import Live from './pages/Live';
+import Setting from './pages/Setting';
+import Chat from './pages/Chat';
+//import useIdleLogout from './hooks/useIdleLogout';
+
 
 
 
@@ -31,6 +36,9 @@ root.render(
         <Route path="/subscriptions" element={<Subscriptions />} />
         <Route path="/content" element={<ContentManagement />} />
         <Route path="/search-results" element={<SearchResults />} />
+        <Route path="/live" element={<Live />} />
+        <Route path="/setting" element={<Setting />} />
+        <Route path="/chat" element={<Chat/>} />
       </Routes>
     </Router>
   </React.StrictMode>

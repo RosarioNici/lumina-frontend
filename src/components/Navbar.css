@@ -1,0 +1,74 @@
+/* src/components/Navbar.css */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+    z-index: 100;
+  }
+
+  .navbar.hidden {
+    transform: translateY(-100%);
+  }
+
+  .navbar.visible {
+    transform: translateY(0);
+  }
+
+  .navbar-logo img {
+    height: 80px; /* Imposta un'altezza minima */
+    object-fit: contain;
+  }
+
+  .navbar-links {
+    display: flex;
+    gap: 10px;
+  }
+
+  .hamburger-btn {
+    display: none;
+  }
+
+  /* Responsive: mostra l'hamburger menu su schermi piccoli */
+  @media (max-width: 768px) {
+    .navbar-links {
+      display: none;
+    }
+    .hamburger-btn {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 2rem;
+    }
+  }
+/* Pulsanti della navbar */
+.navbar-links button {
+    background: linear-gradient(135deg, #ff6f61, #e85c50); /* Gradiente moderno */
+    border: none;
+    border-radius: 30px; /* Bordi arrotondati per un look morbido */
+    padding: 10px 20px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease; /* Transizione morbida per hover e click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-links button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #e85c50, #ff6f61);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .navbar-links button:active {
+    transform: scale(0.98);
+  }

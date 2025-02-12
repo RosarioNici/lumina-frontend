@@ -1,0 +1,17 @@
+// src/components/Layout.js
+import React from 'react';
+import Navbar from './Navbar';
+import Footer from './Footer';
+import './Layout.css'; // file CSS per lo stile del layout
+
+const Layout = ({ children }) => {
+  return (
+    <div className="layout">
+      <Navbar />
+      <main className="layout-content">{children}</main>
+      <Footer />
+    </div>
+  );
+};
+
+export default Layout;

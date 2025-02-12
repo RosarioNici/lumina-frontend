@@ -1,0 +1,154 @@
+/* Generale */
+.live-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+  }
+
+  /* Header */
+  .live-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    z-index: 100;
+  }
+
+  .hamburger-menu {
+    position: relative;
+  }
+
+  .hamburger-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .hamburger-icon {
+    color: #333;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 200;
+  }
+
+  .dropdown-menu li {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .dropdown-menu li:hover {
+    background-color: #f0f0f0;
+  }
+
+  .page-title {
+    flex: 1;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0;
+    color: #333;
+  }
+
+  /* Main Content */
+  .live-main {
+    margin-top: 100px; /* Spazio per l'header */
+    padding: 20px;
+    flex: 1;
+  }
+
+  .live-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .live-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .live-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .live-thumbnail {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .live-card-info {
+    padding: 15px;
+  }
+
+  .live-card-info h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+
+  .live-card-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  .no-live {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .live-header {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .page-title {
+      font-size: 1.2rem;
+    }
+    .live-thumbnail {
+      height: 120px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hamburger-btn {
+      font-size: 1.8rem;
+    }
+    .live-thumbnail {
+      height: 100px;
+    }
+    .live-card-info h3 {
+      font-size: 1rem;
+    }
+    .live-card-info p {
+      font-size: 0.8rem;
+    }
+  }
